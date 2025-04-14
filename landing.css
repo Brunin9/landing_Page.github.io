@@ -9,133 +9,193 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    filter: brightness(60%) contrast(120%);
-    display: flex;
-    flex-direction: column; /* Garantir que os elementos fiquem em coluna */
-    align-items: center;
-    height: 100vh;
-    overflow: auto;
+    filter: brightness(80%) contrast(120%);
 }
 
 /* Cabeçalho */
 header {
-    background: #123458;
+    background-color: #123458;
     color: white;
+    padding: 2em 1em;
     text-align: center;
-    padding: 4em 1em;
     width: 100%;
-    position: relative;
-    top: 0;
 }
 
 header h1 {
     font-size: 3em;
-    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 /* Links de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
 nav a {
     color: white;
-    margin: 0 1em;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #d4c9be;
+    color: #f1efec;
 }
 
 /* Container para as seções */
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 3em 1em;
 }
 
 /* Seções */
 section {
-    padding: 4em 2em;
-    margin: 3em 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 3em;
+    margin-bottom: 3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%;
 }
 
-/* Títulos das seções */
 section h2 {
+    font-size: 2.5em;
     color: #123458;
-    font-size: 2.8em;
-    font-weight: bold;
+    margin-bottom: 1em;
 }
 
-/* Descrição do conteúdo */
 section p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 1.6;
 }
 
-/* Lista de ferramentas */
-#ferramentas ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3em;
+/* Lista de benefícios */
+#beneficios ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
 }
 
-#ferramentas ul li {
-    width: 220px;
-    text-align: center;
+#beneficios li {
     font-size: 1.2em;
 }
 
+#beneficios span {
+    font-weight: bold;
+}
+
+/* Novidades */
+#novidades .novidade {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    justify-content: center;
+}
+
+#novidades .novidade img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 2em;
+    border-radius: 8px;
+}
+
+#novidades .novidade p {
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+/* Ferramentas em Destaque */
+#ferramentas ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
+    padding: 0;
+    list-style: none;
+}
+
+#ferramentas ul li {
+    text-align: center;
+    width: 180px;
+}
+
 #ferramentas ul li img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 1em;
+    border-radius: 50%;
+}
+
+#ferramentas ul li span {
+    display: block;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    color: #123458;
 }
 
 /* Rodapé */
 footer {
     background-color: #123458;
     color: white;
+    padding: 3em 1em;
     text-align: center;
-    padding: 4em 1em;
-    margin-top: 5em;
-    border-top: 3px solid #d4c9be;
-    width: 100%;
-    position: relative;
-    bottom: 0;
+    margin-top: 4em;
 }
 
-/* Links do rodapé com ícones */
+footer .links-footer {
+    margin-bottom: 2em;
+}
+
 footer .links-footer a {
     color: white;
-    margin: 0 1em;
     text-decoration: none;
+    margin: 0 1em;
     font-size: 1.5em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 footer .links-footer a:hover {
     color: #f1efec;
 }
 
-/* Espaço entre ícones e texto */
-footer .links-footer i {
-    margin-right: 10px;
+footer .direitos {
+    font-size: 1.1em;
+    color: #d4c9be;
 }
 
-/* Texto de direitos autorais */
-footer .direitos {
-    margin-top: 1em;
-    font-size: 1em;
-    color: #d4c9be;
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    section {
+        padding: 2em;
+    }
+
+    #beneficios ul {
+        grid-template-columns: 1fr;
+    }
+
+    #novidades .novidade {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #ferramentas ul {
+        gap: 2em;
+    }
 }
