@@ -3,43 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="landing.css">
+    <title>Software Store</title>
+    <link rel="stylesheet" href="landing.css"> <!-- Link para o seu arquivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Link para os ícones -->
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
+        <h1>Software Store</h1>
         <nav>
-            <ul>
-                <li><a href="#secao1">Home</a></li>
-                <li><a href="#secao2">Serviços</a></li>
-                <li><a href="#secao3">Sobre nós</a></li>
-                <li><a href="#secao4">Contato</a></li>
-            </ul>
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#ferramentas">Ferramentas</a>
+            <a href="#destaques">Destaques</a>
         </nav>
     </header>
 
-    <section id="secao1">
-        <h1>Bem-vindo à nossa landing page!</h1>
-        <p>Descrição introdutória sobre o objetivo da página.</p>
-    </section>
+    <!-- Container para as seções -->
+    <div class="container">
+        
+        <!-- Seção Sobre Nós -->
+        <section id="sobre-nos">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma loja de software que oferece ferramentas inovadoras e de alta qualidade para diversos tipos de usuários. Nosso compromisso é fornecer soluções que atendam às suas necessidades de forma eficiente e acessível.</p>
+        </section>
 
-    <section id="secao2">
-        <h2>Nossos Serviços</h2>
-        <p>Informações sobre os serviços que oferecemos.</p>
-    </section>
+        <!-- Seção Benefícios -->
+        <section id="beneficios">
+            <h2>Benefícios de Nossos Produtos</h2>
+            <ul>
+                <li><span>Fácil de usar</span> - Nossas ferramentas são projetadas para serem intuitivas e fáceis de usar.</li>
+                <li><span>Suporte 24/7</span> - Oferecemos suporte contínuo para garantir a melhor experiência para nossos usuários.</li>
+                <li><span>Atualizações frequentes</span> - As ferramentas estão sempre em evolução, com novas funcionalidades e melhorias.</li>
+                <li><span>Compatibilidade ampla</span> - Suporte para as principais plataformas e dispositivos.</li>
+            </ul>
+        </section>
 
-    <section id="secao3">
-        <h2>Sobre Nós</h2>
-        <p>Detalhes sobre a empresa ou o projeto.</p>
-    </section>
+        <!-- Seção Novidades -->
+        <section id="novidades">
+            <h2>Últimos Lançamentos</h2>
+            <div class="novidade">
+                <img src="path_to_image/lancamento1.jpg" alt="Lançamento 1">
+                <p><strong>Ferramenta A</strong> - A última versão com novos recursos incríveis para aumentar sua produtividade.</p>
+            </div>
+            <div class="novidade">
+                <img src="path_to_image/lancamento2.jpg" alt="Lançamento 2">
+                <p><strong>Ferramenta B</strong> - Agora com integração total com outras plataformas para uma experiência mais fluida.</p>
+            </div>
+        </section>
 
-    <section id="secao4">
-        <h2>Contato</h2>
-        <p>Informações de contato e formulário.</p>
-    </section>
+        <!-- Seção Ferramentas -->
+        <section id="ferramentas">
+            <h2>Ferramentas em Destaque</h2>
+            <ul>
+                <li>
+                    <img src="path_to_image/logo_tool1.png" alt="Logo da Ferramenta 1">
+                    <span>Ferramenta 1</span>
+                </li>
+                <li>
+                    <img src="path_to_image/logo_tool2.png" alt="Logo da Ferramenta 2">
+                    <span>Ferramenta 2</span>
+                </li>
+                <li>
+                    <img src="path_to_image/logo_tool3.png" alt="Logo da Ferramenta 3">
+                    <span>Ferramenta 3</span>
+                </li>
+                <li>
+                    <img src="path_to_image/logo_tool4.png" alt="Logo da Ferramenta 4">
+                    <span>Ferramenta 4</span>
+                </li>
+            </ul>
+        </section>
 
+    </div> <!-- Fim do container -->
+    
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+        <div class="links-footer">
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+        </div>
+        <div class="direitos">
+            <p>&copy; 2025 Software Store. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
 </body>
 </html>

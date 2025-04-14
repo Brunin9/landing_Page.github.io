@@ -1,56 +1,141 @@
+/* Reset básico */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f1efec;
+    color: #030303;
+    background-image: url('5072612.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(60%) contrast(120%);
+    display: flex;
+    flex-direction: column; /* Garantir que os elementos fiquem em coluna */
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
 }
 
+/* Cabeçalho */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+    background: #123458;
     color: white;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 10px 0;
-}
-
-#secao1 {
-    background: #f4f4f4;
-}
-
-#secao2 {
-    background: #e2e2e2;
-}
-
-#secao3 {
-    background: #d0d0d0;
-}
-
-#secao4 {
-    background: #b0b0b0;
-}
-
-footer {
     text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: white;
+    padding: 4em 1em;
+    width: 100%;
     position: relative;
+    top: 0;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Links de navegação */
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4c9be;
+}
+
+/* Container para as seções */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seções */
+section {
+    padding: 4em 2em;
+    margin: 3em 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+/* Títulos das seções */
+section h2 {
+    color: #123458;
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+/* Descrição do conteúdo */
+section p {
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+/* Lista de ferramentas */
+#ferramentas ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+
+#ferramentas ul li {
+    width: 220px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#ferramentas ul li img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1em;
+}
+
+/* Rodapé */
+footer {
+    background-color: #123458;
+    color: white;
+    text-align: center;
+    padding: 4em 1em;
+    margin-top: 5em;
+    border-top: 3px solid #d4c9be;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Links do rodapé com ícones */
+footer .links-footer a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+footer .links-footer a:hover {
+    color: #f1efec;
+}
+
+/* Espaço entre ícones e texto */
+footer .links-footer i {
+    margin-right: 10px;
+}
+
+/* Texto de direitos autorais */
+footer .direitos {
+    margin-top: 1em;
+    font-size: 1em;
+    color: #d4c9be;
 }
