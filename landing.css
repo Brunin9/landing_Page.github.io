@@ -1,22 +1,24 @@
-/* Reset básico */
-body {
-    font-family: 'Arial', sans-serif;
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
     background-color: #f1efec;
     color: #030303;
     background-image: url('5072612.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    filter: brightness(80%) contrast(120%);
 }
 
-/* Cabeçalho */
 header {
-    background-color: #123458;
+    background: #123458;
     color: white;
-    padding: 2em 1em;
+    padding: 3em 1em;
     text-align: center;
     width: 100%;
 }
@@ -26,39 +28,36 @@ header h1 {
     margin-bottom: 0.5em;
 }
 
-/* Links de navegação */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
+    margin-top: 1em;
 }
 
 nav a {
     color: white;
+    margin: 0 1em;
     text-decoration: none;
+    font-size: 1.2em;
     font-weight: bold;
-    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #f1efec;
+    color: #d4c9be;
 }
 
-/* Container para as seções */
 .container {
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 3em 1em;
+    padding: 3em 0;
 }
 
-/* Seções */
 section {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
-    padding: 3em;
-    margin-bottom: 3em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 3em 2em;
+    margin: 3em 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -68,134 +67,130 @@ section h2 {
     margin-bottom: 1em;
 }
 
-section p {
-    font-size: 1.1em;
+section p, section ul li {
+    font-size: 1.2em;
     line-height: 1.6;
+    color: #030303;
 }
 
-/* Lista de benefícios */
-#beneficios ul {
+section ul {
     list-style: none;
     padding: 0;
     margin-top: 1.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5em;
 }
 
-#beneficios li {
-    font-size: 1.2em;
+section ul li {
+    margin-bottom: 1em;
 }
 
-#beneficios span {
-    font-weight: bold;
-}
-
-/* Novidades */
-#novidades .novidade {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2em;
-    justify-content: center;
-}
-
-#novidades .novidade img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 2em;
-    border-radius: 8px;
-}
-
-#novidades .novidade p {
-    font-size: 1.2em;
-    max-width: 600px;
-}
-
-/* Ferramentas em Destaque */
 #ferramentas ul {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 3em;
-    padding: 0;
-    list-style: none;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
 }
 
 #ferramentas ul li {
-    text-align: center;
     width: 180px;
+    text-align: center;
 }
 
 #ferramentas ul li img {
     width: 80px;
     height: 80px;
-    margin-bottom: 1em;
-    border-radius: 50%;
+    margin-bottom: 0.5em;
 }
 
-#ferramentas ul li span {
-    display: block;
+#novidades ul {
+    margin-top: 1em;
+}
+
+#novidades ul li {
     font-size: 1.1em;
-    margin-top: 0.5em;
-    color: #123458;
+    padding-left: 1em;
+    position: relative;
 }
 
-/* Rodapé */
+#novidades ul li::before {
+    content: '';
+    position: absolute;
+    left: -1em;
+}
+
 footer {
     background-color: #123458;
     color: white;
-    padding: 3em 1em;
     text-align: center;
-    margin-top: 4em;
+    padding: 3em 1em;
+    width: 100%;
+    margin-top: 5em;
+    border-top: 3px solid #d4c9be;
 }
 
-footer .links-footer {
-    margin-bottom: 2em;
+.links-footer {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
 }
 
-footer .links-footer a {
+.links-footer a {
     color: white;
     text-decoration: none;
-    margin: 0 1em;
-    font-size: 1.5em;
+    font-size: 1.4em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
     transition: color 0.3s ease;
 }
 
-footer .links-footer a:hover {
+.links-footer a i {
+    margin-right: 10px;
+    font-size: 1.6em;
+}
+
+.links-footer a:hover {
     color: #f1efec;
 }
 
-footer .direitos {
-    font-size: 1.1em;
+.direitos {
+    margin-top: 2em;
+    font-size: 0.9em;
     color: #d4c9be;
 }
 
-/* Responsividade */
+#parcerias ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 2em;
+  }
+  
+  #parcerias ul li {
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    color: #030303;
+  }
+  
+  #parcerias ul li i {
+    font-size: 1.6em;
+    color: #123458;
+  }
+  
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
+    #ferramentas ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    nav {
+    .links-footer {
         flex-direction: column;
         gap: 1em;
-    }
-
-    section {
-        padding: 2em;
-    }
-
-    #beneficios ul {
-        grid-template-columns: 1fr;
-    }
-
-    #novidades .novidade {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #ferramentas ul {
-        gap: 2em;
     }
 }
